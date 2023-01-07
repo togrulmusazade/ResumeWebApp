@@ -19,7 +19,7 @@ import java.io.IOException;
  *
  * @author HP
  */
-@WebServlet(name = "UserDetailController", urlPatterns = {"/userdetail"})      //servletimizin adi ve url'si qeyd etmisik
+            @WebServlet(name = "UserDetailController", urlPatterns = {"/userdetail"})      //servletimizin adi ve url'si qeyd etmisik
 public class UserDetailController extends HttpServlet {
     
     private UserDaoInter userDao = Context.instanceUserDao();
@@ -70,8 +70,7 @@ public class UserDetailController extends HttpServlet {
             request.setAttribute("user",u);
             request.getRequestDispatcher("userdetail.jsp").forward(request,response);   //userdetail.jsp response generate edir, userdetail'den gelen request ve response esasinda.. ve ele gosterirki sanki userdetail'di bunu eden, userdetail.jsp deilmis sanki
         }catch(Exception ex){
-            ex.printStackTrace();
-            response.sendRedirect("error.jsp?msg="+ex.getMessage());
+            response.sendRedirect("error?msg="+ex.getMessage());
         }
     }
 

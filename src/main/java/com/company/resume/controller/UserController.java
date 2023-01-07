@@ -19,11 +19,9 @@ import java.io.IOException;
  *
  * @author HP
  */
-@WebServlet(name = "UserController", urlPatterns = {"/users"})      //servletimizin adi ve url'si qeyd etmisik
+@WebServlet(name = "UserController", urlPatterns = {"/users"})
 public class UserController extends HttpServlet {
     
-    private UserDaoInter userDao = Context.instanceUserDao();
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("users.jsp").forward(request, response);
 

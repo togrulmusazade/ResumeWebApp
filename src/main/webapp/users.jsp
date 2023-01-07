@@ -74,7 +74,7 @@
             <tr>
                 <td><%=u.getName()%></td>
                 <td><%=u.getSurname()%></td>
-                <td><%=u.getNationality().getName() == null ? "N/A" : u.getNationality().getName()%></td>
+                <td><%=u.getNationality().getName()==null ? "N/A" : u.getNationality().getName()%></td>
                 <td style="width: 5px">
                         <input type="hidden" name="id" value="<%=u.getId()%>"/>
                         <input type="hidden" name="action" value="delete"/>
